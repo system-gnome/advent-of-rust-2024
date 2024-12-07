@@ -5,7 +5,7 @@ use std::env;
 fn main() {
     let args: Vec<String> = env::args().collect();
     if args.len() < 2 {
-        eprintln!("Usage: advent_of_code <day>");
+        eprintln!("Usage: cargo run <day>. Example: cargo run 1-1");
         std::process::exit(1);
     }
 
@@ -23,6 +23,8 @@ fn main() {
         "5-2" => days::day_5_2::run(),
         "6-1" => days::day_6_1::run(),
         "6-2" => days::day_6_2::run(),
+        "7-1" => days::day_7_1::run(),
+        "7-2" => days::day_7_2::run(),
         _ => eprintln!("Day {} not implemented!", day),
     }
 }
