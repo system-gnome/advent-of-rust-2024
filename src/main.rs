@@ -25,6 +25,8 @@ fn main() {
         "6-2" => days::day_6_2::run(),
         "7-1" => days::day_7_1::run(),
         "7-2" => days::day_7_2::run(),
+        "8-1" => days::day_8_1::run(),
+        "8-2" => days::day_8_2::run(),
         _ => eprintln!("Day {} not implemented!", day),
     }
 }
