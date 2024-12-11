@@ -4,11 +4,11 @@ use std::{
 };
 
 pub fn run() {
-    let filename = "src/inputs/day_8.txt";
-    let contents = fs::read_to_string(filename).unwrap();
+    let file_name = "src/inputs/day_8.txt";
+    let input = fs::read_to_string(file_name).unwrap();
 
-    let antennas = parse_input(&contents);
-    let (width, height) = get_dimensions(&contents);
+    let antennas = parse_input(&input);
+    let (width, height) = get_dimensions(&input);
 
     let antinode_count = place_antinodes_and_return_count(&antennas, width, height);
     println!(

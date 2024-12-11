@@ -23,7 +23,7 @@ fn validate_memory_from_file(memory: &str) -> i32 {
 
     while index < bytes.len() {
         if bytes[index..].starts_with(b"mul(") {
-            index += 4; // Move past "mul("
+            index += 4;
 
             let start_num1 = index;
             let mut digit_count = 0;
@@ -38,7 +38,7 @@ fn validate_memory_from_file(memory: &str) -> i32 {
             }
 
             if index < bytes.len() && bytes[index] == b',' {
-                index += 1; // Move past ','
+                index += 1;
 
                 let start_num2 = index;
                 digit_count = 0;
@@ -53,7 +53,7 @@ fn validate_memory_from_file(memory: &str) -> i32 {
                 }
 
                 if index < bytes.len() && bytes[index] == b')' {
-                    index += 1; // Move past ')'
+                    index += 1;
 
                     if let (Ok(num1), Ok(num2)) = (num1_str.parse::<i32>(), num2_str.parse::<i32>())
                     {
